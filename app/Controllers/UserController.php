@@ -52,4 +52,9 @@ class UserController extends BaseController
         ];
         return view('user/v_login', $data);
     }
+
+    public function tampilnotes()
+    {
+        return view('v_notes');
+    }
 }

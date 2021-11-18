@@ -37,6 +37,7 @@ $routes->get('/mastermine/register', 'UserController::register');
 $routes->post('/mastermine/saveRegister', 'UserController::saveRegister');
 
 $routes->get('/mastermine/login', 'UserController::login');
+$routes->get('/mastermine/tampilnotes', 'UserController::tampilnotes');
 
 /*
  * --------------------------------------------------------------------
