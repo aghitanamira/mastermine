@@ -17,7 +17,7 @@ class UserController extends BaseController
         $data = [
             'title' => "Admin"
         ];
-        return view('v_admin', $data);
+        return view('v_template', $data);
     }
 
     public function register()
