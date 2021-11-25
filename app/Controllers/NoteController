@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Controllers;
+
+use App\Controllers\BaseController;
+use App\Models\NoteModel; //ini biar bisa nyimpen ke DB nya, tp perlu dibuat constructornya
+
+class NoteController extends BaseController
+{
+    public function __construct()
+    {
+        $this->noteModel = new NoteModel(); //nah ini contruct utk NoteModel
+    }
+
+    public function index()
+    {
+        $data = [
+            'title' => "Home"
+        ];
+        return view('v_template', $data);
+    }
+
+    public function tambahnote()
+    {
+        return view('v_tambahnote');
+    }
+}

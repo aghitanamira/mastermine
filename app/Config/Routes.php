@@ -31,13 +31,13 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/mastermine', 'Home::index');
+$routes->get('/', 'Home::index');
 
-$routes->get('/mastermine/register', 'UserController::register');
-$routes->post('/mastermine/saveRegister', 'UserController::saveRegister');
+$routes->get('/register', 'UserController::register');
+$routes->post('/saveRegister', 'UserController::saveRegister');
 
-$routes->get('/mastermine/login', 'UserController::login');
-$routes->get('/mastermine/tampilnotes', 'UserController::tampilnotes');
+$routes->get('/login', 'UserController::login');
+$routes->get('/tambahnote', 'NoteController::tambahnote');
 
 /*
  * --------------------------------------------------------------------

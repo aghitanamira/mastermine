@@ -226,7 +226,7 @@
                             <div class="pcoded-navigation-label">Forms</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="form-elements-component.html" class="waves-effect waves-dark">
+                                    <a href="/tambahnote" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext">Form</span>
                                         <span class="pcoded-mcaret"></span>
@@ -313,30 +313,30 @@
                                                     <div class="col-md-12">
                                                         <div class="card text-center order-visitor-card">
                                                             <div class="card-block">
-                                                                
+
                                                             </div>
                                                         </div>
-                                                    <!-- sale card end -->
+                                                        <!-- sale card end -->
+                                                    </div>
                                                 </div>
+
+                                                <!--  sale analytics end -->
+
                                             </div>
-
-                                            <!--  sale analytics end -->
-
                                         </div>
+                                        <!-- Page-body end -->
                                     </div>
-                                    <!-- Page-body end -->
+                                    <div id="styleSelector"> </div>
                                 </div>
-                                <div id="styleSelector"> </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Warning Section Starts -->
-    <!-- Older IE warning message -->
-    <!--[if lt IE 10]>
+        <!-- Warning Section Starts -->
+        <!-- Older IE warning message -->
+        <!--[if lt IE 10]>
 <div class="ie-warning">
     <h1>Warning!!</h1>
     <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
@@ -377,26 +377,26 @@
     <p>Sorry for the inconvenience!</p>
 </div>
 <![endif]-->
-    <!-- Warning Section Ends -->
+        <!-- Warning Section Ends -->
 
-    <!-- Required Jquery -->
-    <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery/jquery.min.js "></script>
-    <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
-    <script type="text/javascript" src="/assets/material_able-main/assets/js/popper.js/popper.min.js"></script>
-    <script type="text/javascript" src="/assets/material_able-main/assets/js/bootstrap/js/bootstrap.min.js "></script>
-    <!-- waves js -->
-    <script src="/assets/material_able-main/assets/pages/waves/js/waves.min.js"></script>
-    <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+        <!-- Required Jquery -->
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery/jquery.min.js "></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/popper.js/popper.min.js"></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/bootstrap/js/bootstrap.min.js "></script>
+        <!-- waves js -->
+        <script src="/assets/material_able-main/assets/pages/waves/js/waves.min.js"></script>
+        <!-- jquery slimscroll js -->
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
 
-    <!-- slimscroll js -->
-    <script src="/assets/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+        <!-- slimscroll js -->
+        <script src="/assets/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
 
-    <!-- menu js -->
-    <script src="/assets/material_able-main/assets/js/pcoded.min.js"></script>
-    <script src="/assets/material_able-main/assets/js/vertical/vertical-layout.min.js "></script>
+        <!-- menu js -->
+        <script src="/assets/material_able-main/assets/js/pcoded.min.js"></script>
+        <script src="/assets/material_able-main/assets/js/vertical/vertical-layout.min.js "></script>
 
-    <script type="text/javascript" src="/assets/material_able-main/assets/js/script.js "></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/script.js "></script>
 </body>
 
 </html>
