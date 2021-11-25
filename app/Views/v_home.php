@@ -113,19 +113,28 @@
                             </div>
                         </div>
                         <a href="index.html">
-                            <img class="img-fluid" src="/assets/material_able-main/assets/images/logoputih.png" alt="Theme-Logo" width="160" />
+                            <img class="img-fluid" src="/assets/material_able-main/assets/images/logo.png" alt="Theme-Logo" />
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
                         </a>
                     </div>
                     <div class="navbar-container container-fluid">
-
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                            </li>
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
                         <ul class="nav-right">
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
-                                    <img src="/assets/material_able-main/assets/images/mail.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>Mail</span>
+                                    <img src="/assets/material_able-main/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <span>Master</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -150,14 +159,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            <li>
-                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
-                            </li>
-                            <li>
-                                <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
-                                    <i class="ti-fullscreen"></i>
-                                </a>
-                            </li>
                             </li>
                         </ul>
                     </div>
@@ -171,9 +172,9 @@
                         <div class="pcoded-inner-navbar main-menu">
                             <div class="">
                                 <div class="main-menu-header">
-                                    <img class="img-80 img-radius" src="/assets/material_able-main/assets/images/mail.jpg" alt="User-Profile-Image">
+                                    <img class="img-80 img-radius" src="/assets/material_able-main/assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">Mail<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details">Master<i class="fa fa-caret-down"></i></span>
                                     </div>
                                 </div>
                                 <div class="main-menu-content">
@@ -184,13 +185,11 @@
                                             <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
                                     </ul>
-
                                 </div>
-
                             </div>
                             <div class="pcoded-navigation-label">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
+                                <li class="active">
                                     <a href="/" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext">Dashboard</span>
@@ -198,16 +197,18 @@
                                     </a>
                                 </li>
                             </ul>
-
-                            <div class="pcoded-navigation-label">Notes</div>
+                            <div class="pcoded-navigation-label">Forms</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="active">
+                                <li class="">
                                     <a href="/notes/create" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext">Create Note</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
+                            </ul>
+                            <div class="pcoded-navigation-label">UI Element</div>
+                            <ul class="pcoded-item pcoded-left-item">
                                 <li class="pcoded-hasmenu">
                                     <a href="javascript:void(0)" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i><b>BC</b></span>
@@ -216,9 +217,10 @@
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class=" ">
-                                            <a href="breadcrumb.html" class="waves-effect waves-dark">
+                                            <a href="/notes/detail" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">IPA</span>
+                                                <span class="pcoded-mtext">IPA
+                                                </span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
@@ -233,8 +235,6 @@
                                 </li>
                             </ul>
 
-
-
                         </div>
                     </nav>
                     <div class="pcoded-content">
@@ -244,8 +244,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">CREATE NOTE</h5>
-                                            <p class="m-b-0">what's the note today ?</p>
+                                            <h5 class="m-b-10">Dashboard</h5>
+                                            <p class="m-b-0">Mastermine</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -253,7 +253,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Create Note</a>
+                                            <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -261,78 +261,146 @@
                             </div>
                         </div>
                         <!-- Page-header end -->
-                        <!-- Main-body start -->
-                        <div class="main-body">
-                            <div class="page-wrapper">
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!--  sale analytics start -->
+                                            <div class="col-xl-4 col-md-8">
+                                                <div class="card table-card">
+                                                    <?php if (session()->getFlashdata('pesan')) : ?>
+                                                        <div class="alert alert-success" role="alert">
+                                                            <?= session()->getFlashdata('pesan'); ?>
+                                                        </div>
+                                                    <?php endif ?>
+                                                    <div class="card-header">
+                                                        <h5>Recent Notes</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <tbody>
 
-                                <!-- Page body start -->
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <!-- Basic Form Inputs card start -->
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5>Create Note</h5>
+                                                                    <?php
+                                                                    foreach ($note as $i => $note) : ?>
+                                                                        <tr>
+                                                                            <th scope="row"><?= $i + 1; ?></th>
+                                                                            <td><a href="/notes/"><?= $note['judul']; ?></a></td>
+                                                                            <td><?= $note['kategori']; ?></td>
+                                                                        </tr>
+                                                                    <?php
+                                                                    endforeach;
+                                                                    ?>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="card-block">
+                                            <div class="col-xl-8 col-md-12">
+                                                <div class="row">
+                                                    <!-- sale card start -->
 
-                                                <form action="/notes/save" method="POST">
-                                                    <?= csrf_field(); ?>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">Title</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; //if-else dlm satu baris
-                                                                                                    ?>" placeholder="Type title note here..." id="judul" name="judul" value="<?= old('judul'); ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">Category</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control <?= ($validation->hasError('kategori')) ? 'is-invalid' : ''; //if-else dlm satu baris
-                                                                                                    ?>" placeholder="Type category note here..." id="kategori" name="kategori" value="<?= old('kategori'); ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">Description</label>
-                                                        <div class="col-sm-10">
-                                                            <textarea rows="5" cols="5" class="form-control <?= ($validation->hasError('deskripsi')) ? 'is-invalid' : ''; //if-else dlm satu baris
-                                                                                                            ?>" placeholder="Type your description note here..." id="deskripsi" name="deskripsi" value="<?= old('deskripsi'); ?>"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <input type="submit" class="btn btn-primary pull-right" style="position: right;" value="Submit">
-                                                    <!-- <button type="submit" class="btn btn-primary pull-right" style="position: right;">CREATE</button> -->
+                                                    <div class="col-md-12">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
 
-                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <!-- sale card end -->
+                                                    </div>
+                                                </div>
+
+                                                <!--  sale analytics end -->
 
                                             </div>
                                         </div>
-                                        <!-- Basic Form Inputs card end -->
+                                        <!-- Page-body end -->
                                     </div>
+                                    <div id="styleSelector"> </div>
                                 </div>
                             </div>
-                            <!-- Page body end -->
                         </div>
                     </div>
-                    <!-- Main-body end -->
+                </div>
+            </div>
+        </div>
+        <!-- Warning Section Starts -->
+        <!-- Older IE warning message -->
+        <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="/assets/material_able-main/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="/assets/material_able-main/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="/assets/material_able-main/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="/assets/material_able-main/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="/assets/material_able-main/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+        <!-- Warning Section Ends -->
 
+        <!-- Required Jquery -->
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery/jquery.min.js "></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/popper.js/popper.min.js"></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/bootstrap/js/bootstrap.min.js "></script>
+        <!-- waves js -->
+        <script src="/assets/material_able-main/assets/pages/waves/js/waves.min.js"></script>
+        <!-- jquery slimscroll js -->
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
 
-                    <!-- Required Jquery -->
-                    <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery/jquery.min.js "></script>
-                    <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
-                    <script type="text/javascript" src="/assets/material_able-main/assets/js/popper.js/popper.min.js"></script>
-                    <script type="text/javascript" src="/assets/material_able-main/assets/js/bootstrap/js/bootstrap.min.js "></script>
-                    <!-- waves js -->
-                    <script src="/assets/material_able-main/assets/pages/waves/js/waves.min.js"></script>
-                    <!-- jquery slimscroll js -->
-                    <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+        <!-- slimscroll js -->
+        <script src="/assets/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
 
-                    <!-- slimscroll js -->
-                    <script src="/assets/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+        <!-- menu js -->
+        <script src="/assets/material_able-main/assets/js/pcoded.min.js"></script>
+        <script src="/assets/material_able-main/assets/js/vertical/vertical-layout.min.js "></script>
 
-                    <!-- menu js -->
-                    <script src="/assets/material_able-main/assets/js/pcoded.min.js"></script>
-                    <script src="/assets/material_able-main/assets/js/vertical/vertical-layout.min.js "></script>
-
-                    <script type="text/javascript" src="/assets/material_able-main/assets/js/script.js "></script>
+        <script type="text/javascript" src="/assets/material_able-main/assets/js/script.js "></script>
 </body>
 
 </html>

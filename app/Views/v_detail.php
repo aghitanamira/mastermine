@@ -190,9 +190,19 @@
                             <div class="pcoded-navigation-label">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
-                                    <a href="index.html" class="waves-effect waves-dark">
+                                    <a href="/" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="pcoded-navigation-label">Forms</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a href="/notes/create" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Create Note</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
@@ -207,9 +217,10 @@
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class=" ">
-                                            <a href="breadcrumb.html" class="waves-effect waves-dark">
+                                            <a href="/notes/detail" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">IPA</span>
+                                                <span class="pcoded-mtext">IPA
+                                                </span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
@@ -223,16 +234,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="pcoded-navigation-label">Forms</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a href="/tambahnote" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                        <span class="pcoded-mtext">Form</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
+
                         </div>
                     </nav>
                     <div class="pcoded-content">
@@ -269,8 +271,13 @@
                                             <!--  sale analytics start -->
                                             <div class="col-xl-4 col-md-8">
                                                 <div class="card table-card">
+                                                    <?php if (session()->getFlashdata('pesan')) : ?>
+                                                        <div class="alert alert-success" role="alert">
+                                                            <?= session()->getFlashdata('pesan'); ?>
+                                                        </div>
+                                                    <?php endif ?>
                                                     <div class="card-header">
-                                                        <h5>Recent Notes</h5>
+                                                        <h5>Note's Detail</h5>
                                                         <div class="card-header-right">
                                                             <ul class="list-unstyled card-option">
                                                                 <li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -281,27 +288,24 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <div class="card-block">
-                                                        <div class="table-responsive">
-                                                            <table class="table table-hover">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <h6>IPA</h6>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div class="d-inline-block align-middle">
-                                                                                <div class="d-inline-block">
-                                                                                    <h6>IPS</h6>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-lg-8">
+                                                                <h1 class="mb-4">
+                                                                    <?= $note['judul']; ?>
+                                                                </h1>
+                                                                <div class="post-meta d-flex mb-5">
+                                                                    <!-- <div class="bio-pic mr-3">
+                        <img src="images/person_1.jpg" alt="Image" class="img-fluidid">
+                    </div> -->
+                                                                    <div class="vcard">
+                                                                        <span class="date-read">Created at: <?= $note['created_at']; ?> <span class="mx-1">&bullet;
+                                                                            </span>
+                                                                    </div>
+                                                                </div>
 
+                                                                <?= $note['deskripsi']; ?>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

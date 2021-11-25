@@ -7,17 +7,10 @@ use App\Models\UserModel; //ini biar bisa nyimpen ke DB nya, tp perlu dibuat con
 
 class UserController extends BaseController
 {
+    protected $UserModel;
     public function __construct()
     {
         $this->userModel = new UserModel(); //nah ini contruct utk usermodel
-    }
-
-    public function index()
-    {
-        $data = [
-            'title' => "Home"
-        ];
-        return view('v_template', $data);
     }
 
     public function register()

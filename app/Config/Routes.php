@@ -31,13 +31,17 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'NoteController::index');
 
 $routes->get('/register', 'UserController::register');
 $routes->post('/saveRegister', 'UserController::saveRegister');
 
 $routes->get('/login', 'UserController::login');
-$routes->get('/tambahnote', 'NoteController::tambahnote');
+
+//$routes->get('/notes', 'NoteController::index');
+$routes->get('/notes/create', 'NoteController::create');
+$routes->post('/notes/save', 'NoteController::save');
+$routes->get('/notes/:(any)', 'NoteController::detail/$1');
 
 /*
  * --------------------------------------------------------------------

@@ -12,7 +12,7 @@ class NoteModel extends Model
     protected $allowedFields        = ['judul', 'deskripsi', 'kategori', 'slug', 'created_at', 'updated_at'];
     protected $useTimestamps        = true;
 
-    public function getPosts($slug = false)
+    public function getNote($slug = false)
     {
         if ($slug == false) {
             return $this->findAll();
