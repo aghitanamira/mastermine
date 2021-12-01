@@ -41,7 +41,8 @@ $routes->get('/login', 'UserController::login');
 //$routes->get('/notes', 'NoteController::index');
 $routes->get('/notes/create', 'NoteController::create');
 $routes->post('/notes/save', 'NoteController::save');
-$routes->get('/notes/:(any)', 'NoteController::detail/$1');
+$routes->get('/notes/(:any)', 'NoteController::detail/$1');
+$routes->get('/notes/edit/(:any)', 'NoteController::editnote/$1');
 
 /*
  * --------------------------------------------------------------------

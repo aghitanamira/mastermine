@@ -16,7 +16,7 @@ class NoteController extends BaseController
     {
         $note = $this->NoteModel->findAll();
         $data = [
-            'title' => "Home",
+            'title' => "Dashboard",
             'note' => $note
         ];
         return view('v_home', $data);
@@ -83,5 +83,16 @@ class NoteController extends BaseController
 
         session()->setFlashdata('pesan', 'Catatan berhasil ditambahkan.');
         return redirect()->to('/');
+    }
+
+    public function editnote($slug)
+    {
+        session();
+        $data = [
+            'validation' => \Config\Services::validation(),
+            'title' => 'Create Note',
+            'note' => $this->NoteModel->getNote($slug)
+        ];
+        return view('v_editnote', $data);
     }
 }

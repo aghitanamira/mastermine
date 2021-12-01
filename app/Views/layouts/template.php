@@ -95,11 +95,11 @@
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
         <div class="pcoded-container navbar-wrapper">
-        <?= $this->include('layouts/navbar'); ?>
+            <?= $this->include('layouts/navbar'); ?>
 
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
-                <?= $this->include('layouts/sidebar'); ?>
+                    <?= $this->include('layouts/sidebar'); ?>
 
 
                     <div class="pcoded-content">
@@ -109,8 +109,8 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Dashboard</h5>
-                                            <p class="m-b-0">Mastermine</p>
+                                            <h5 class="m-b-10">Hi Mail!</h5>
+                                            <p class="m-b-0">Welcome to Mastermine</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -118,7 +118,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.html"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Dashboard</a>
+                                            <li class="breadcrumb-item"><a href="#!"><?= $title ?></a>
                                             </li>
                                         </ul>
                                     </div>
