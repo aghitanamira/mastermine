@@ -39,7 +39,7 @@
                                             foreach ($note as $i => $note) : ?>
                                                 <tr>
                                                     <th scope="row"><?= $i + 1; ?></th>
-                                                    <td><a href="/notes/<?= $note['slug']; ?>"><?= $note['judul']; ?></a></td>
+                                                    <td><a href="/notes/detail/<?= $note['slug']; ?>"><?= $note['judul']; ?></a></td>
                                                     <td><?= $note['kategori']; ?></td>
                                                 </tr>
                                             <?php

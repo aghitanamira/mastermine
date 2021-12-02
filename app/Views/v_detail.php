@@ -19,7 +19,8 @@
                         <div class="card-header">
                             <h5>Note's Detail</h5>
                             <div class="card-header-right">
-                                <a href="/notes/edit/<?= $note['slug']; ?>"> <i class="fa fa-pencil"></i> </a>
+                                <a href="/notes/edit/<?= $note['slug'] ?>"><i class="fa fa-pencil"></i> </a>
+
                                 <a href="/notes/delete/<?= $note['slug']; ?>"> <i class="fa fa-trash"></i> </a>
                             </div>
                         </div>
