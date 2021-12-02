@@ -31,9 +31,6 @@
                                         <?= $note['judul']; ?>
                                     </h1>
                                     <div class="post-meta d-flex mb-5">
-                                        <!-- <div class="bio-pic mr-3">
-                        <img src="images/person_1.jpg" alt="Image" class="img-fluidid">
-                    </div> -->
                                         <div class="vcard ">
                                             <span class="date-read">Created at: <?= $note['created_at']; ?> <span class="mx-1">&bullet;
                                                 </span>
