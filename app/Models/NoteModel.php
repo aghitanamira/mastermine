@@ -20,4 +20,13 @@ class NoteModel extends Model
 
         return $this->where(['slug' => $slug])->first();
     }
+
+    public function getNotes($kategori = false)
+    {
+        if ($kategori == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['kategori' => $kategori])->first();
+    }
 }

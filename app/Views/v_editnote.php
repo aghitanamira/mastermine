@@ -18,6 +18,7 @@
 
                         <form action="/notes/update/<?= $note['note_id']; ?>" method="POST">
                             <?= csrf_field(); ?>
+                            <input type="hidden" name="slug" value="<?= $note['slug']; ?>">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Title</label>
                                 <div class="col-sm-10">
@@ -35,8 +36,9 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <input rows="5" cols="5" id="deskripsi" name="deskripsi" class="form-control  <?= ($validation->hasError('deskripsi')) ? 'is-invalid' : ''; //if-else dlm satu baris
-                                                                                                                    ?>" placeholder="Type your description note here..." value="<?= $note['deskripsi']; ?>"></input>
+                                    <textarea rows="5" cols="5" class="form-control <?= ($validation->hasError('deskripsi')) ? 'is-invalid' : ''; //if-else dlm satu baris
+                                                                                    ?>" placeholder="Type your description note here..." id="deskripsi" name="deskripsi"><?= $note['deskripsi']; ?>
+                                                                                    </textarea>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary pull-right" style="position: right;"> Update </button>

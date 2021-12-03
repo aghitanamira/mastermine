@@ -144,6 +144,28 @@ class NoteController extends BaseController
         ]);
 
         session()->setFlashdata('pesan', 'Catatan berhasil diubah.');
-        return redirect()->to('v_detail');
+        return redirect()->to("/");
+    }
+
+    public function delete($slug)
+    {
+        $NoteModel = model('NoteModel');
+        $NoteModel->where(['slug' => $slug])->delete();
+        session()->setFlashdata('pesan', 'Catatan berhasil dihapus.');
+        return redirect()->to('/');
+    }
+
+    public function kategori($kategori)
+    {
+        $data = [
+            'title' => 'Detail Kategori Note',
+            'note' => $this->NoteModel->getNotes($kategori)
+        ];
+
+        //jika note tidak ada
+        if (empty($data['note'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Catatan ' . $kategori . ' tidak ditemukan.');
+        }
+        return view('v_detKategori', $data);
     }
 }
